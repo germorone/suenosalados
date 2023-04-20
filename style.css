@@ -1,0 +1,332 @@
+/* paleta de colores
+
+rgb(244,184,192)
+rgb(251,204,212)
+rgb(240,204,204) */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 30vh;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 0 0px;
+    box-shadow: 0px 5px 10px rgb(234, 234, 234);
+    z-index: 1;
+}
+
+footer{
+    margin-top: 5px;
+    color: grey;
+}
+
+.logo-size{
+   object-fit:contain;
+   width: 100%;
+   height: 100%; 
+}
+
+.bordee {
+    border: solid black 1px;
+}
+
+body{
+    padding: 0 150px;
+}
+.main-overflow{
+    overflow: hidden;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.header-grid {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "cuotas cuotas cuotas"
+        "buscador logo login"
+        "menu menu menu"
+    ;
+    grid-template-rows: 15% 60% auto;
+}
+
+#msj-cuotas {
+    grid-area: cuotas;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#buscador {
+    grid-area: buscador;
+    padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#login {
+    grid-area: login;
+}
+#menu-flex {
+    grid-area: menu;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+
+}
+
+.lista-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+/*     background-color: rgb(244,184,192); */
+    
+}
+.login-grid{
+    display: grid;
+    grid-template-areas: 
+    "carrito carrito"
+    "registrar iniciar";
+    justify-content: end;
+    align-content: center;
+    grid-template-rows: 35% 30%; 
+}
+#carrito{
+    grid-area: carrito;
+    background-color: rgb(244,184,192);
+    padding: 5px;
+    text-align: center; 
+    color: white;
+    border-radius: 4%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+     align-items: center;
+     font-size: 150%;
+
+}
+.carrito-size{
+    width: 25px; 
+}
+#carrito-enlace{
+    text-decoration: none;
+    color: white;
+}
+#registrarse{
+    grid-area: registrar;
+    padding: 2px 5px;
+    color:  rgb(244,184,192);
+}
+#iniciar-sesion{
+    grid-area: iniciar;
+    padding: 2px 5px;
+    color:  rgb(244,184,192);
+}
+.lista-flex li {
+    list-style-type: none;
+}
+.lista-flex a {
+    text-decoration: none;
+}
+
+.login-grid a {
+    text-decoration: none;
+}
+#carrito:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.estilo-nav{
+    color: white;
+    opacity: 0.7;
+}
+
+.estilo-nav:hover{
+    opacity: 1;
+    border-bottom: solid white 2px;
+    transition: border-bottom 0.2s;
+}
+
+#registrarse:hover, #iniciar-sesion:hover{
+    border-bottom: solid rgb(244,184,192) 2px;
+    background-color: rgb(255, 252, 252);
+}
+
+#buscar:hover{
+    box-shadow: 0 0 15px rgb(255, 218, 223);
+}
+.degradado-nav{
+    background:linear-gradient(25deg,rgb(251, 199, 206) 1%, rgb(244,184,192) 50%);
+}
+
+.mover-logo{
+    animation-name: logo-movimiento;
+    animation-duration: 3s;
+    
+}
+
+.pag-nav-subrayado{
+    border-bottom: solid white 2px;
+    opacity: 1;
+}
+
+.galeria{
+    margin-top: 1vh;
+    height: 68vh;
+}
+
+.gallery-img{
+    object-fit:contain;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+.destacados_ppal_flex{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.fondo1{
+    background-image: url('./gallery/destacado/Colleción\ DISCOVER\ DREAMS.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+}
+
+.destacado{
+    height: 60vh;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 22px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color:pink;
+    opacity: 0.65;
+}
+
+.destacado:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+main{
+    margin-top: 20px;
+}
+
+/* CONTACTO */
+
+.formulario{
+    width: 100%;
+    height: 80%;
+}
+.form-flex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+    grid-area: formulario;
+
+}
+.botones-form-flex{
+    width: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#text-form{
+    resize:none
+}
+
+.redes{
+    grid-area: redes;
+}
+
+.section-contacto-grid{
+    height: 60vh;
+    display: grid;
+    grid-template-areas: 
+    "formulario redes";
+
+
+/*     grid-template-rows: 20% auto; */
+    grid-template-columns: 50% 50%;
+}
+
+.redes-flex{
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.redes-flex-horizontal{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.redes-flex-horizontal p{
+    margin-left: 3%;
+}
+.redes-flex-horizontal a{
+    margin-left: 3%;
+    text-decoration: none;
+    color: black;
+}
+
+/* POLITICA */
+
+.politica{  
+    height: 60vh;
+}
+.texto-politica{
+    text-align: justify;
+    line-height: 1.5;
+    margin: 1%;
+}
+/* COMPRAR */
+.comprar{  
+    height: 61vh;
+    font-size: small;
+}
+ol li{
+    margin-left: 2%;
+}
+/* ANIMACIONES */
+
+@keyframes logo-movimiento{
+    0%{
+        transform: translateX(800px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
